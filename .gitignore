@@ -1,0 +1,5 @@
+**/Data
+**/runs
+**/__pycache__/
+*.gz
+*.log
