@@ -1,4 +1,4 @@
 ## PyTorch DL-RL
 
-RL :
+# RL :
 K-Bandit Alogirthms : Eps-Greedy, UCB, Gardient Bandit
