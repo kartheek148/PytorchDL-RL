@@ -1,5 +1,7 @@
 **/Data
 **/runs
-**/__pycache__/
+**/__pycache__
 *.gz
 *.log
+
+**/.ipynb_checkpoints

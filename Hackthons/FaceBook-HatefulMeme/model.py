@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from collections import defaultdict
 from sklearn.model_selection import train_test_split
 #%%
-path = "C:/Users/knallabolu/Downloads/Lnmwdnq3YcF7F3YsJncp/data"
+path = "Lnmwdnq3YcF7F3YsJncp/data"
 
 # %%
 os.chdir(path)

@@ -9,7 +9,7 @@ import datetime
 from collections import defaultdict
 from sklearn.model_selection import train_test_split
 # %%
-path = "C:/Users/knallabolu/Downloads/Participants_Data/Participants_Data/"
+path = "Participants_Data/"
 train = pd.read_csv(os.path.join(path,"Train.csv"))
 test = pd.read_csv(os.path.join(path,"Test.csv"))
 PRE_TRAINED_MODEL_NAME = 'roberta-base'
