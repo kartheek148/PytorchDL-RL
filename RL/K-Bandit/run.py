@@ -1,3 +1,4 @@
+# %%
 from model import Epsgreedy, NonStationary, ConstantStep, IntialValues, UCBound, Gradient
 import torch
 from torch.distributions import normal, bernoulli
@@ -6,6 +7,8 @@ import model
 import importlib
 importlib.reload(model)
 torch.manual_seed(14)
+
+# %%
 
 
 def plot_results(model, steps, num_actions, eps, runs):
@@ -37,14 +40,16 @@ def plot_results(model, steps, num_actions, eps, runs):
     plt.show()
 
 
+# %%
 steps = 1000
 eps = [0.0]
 num_actions = 20
 runs = 5
-
+# %%
 # plot_results(Epsgreedy,steps,num_actions,eps,runs)
 # plot_results(NonStationary,steps,num_actions,eps,runs)
 plot_results(IntialValues, steps, num_actions, eps, runs)
+# %%
 
 
 def plot_results_const_step(model, steps, num_actions, eps, runs, step_size):
@@ -76,12 +81,15 @@ def plot_results_const_step(model, steps, num_actions, eps, runs, step_size):
     plt.show()
 
 
+# %%
 eps = 0.1
 steps = 1000
 num_actions = 20
 runs = 5
 step_size = [0.1, 0.15, 0.2]
 plot_results_const_step(ConstantStep, steps, num_actions, eps, runs, step_size)
+
+# %%
 
 
 def plot_results_UCB(model, steps, num_actions, runs, c):
@@ -113,11 +121,14 @@ def plot_results_UCB(model, steps, num_actions, runs, c):
     plt.show()
 
 
+# %%
 steps = 500
 num_actions = 20
 runs = 2
 c = [0.8, 2]
 plot_results_UCB(UCBound, steps, num_actions, runs, c)
+
+# %%
 
 
 def plot_results_Gradient(model, steps, num_actions, runs, alpha):
@@ -139,8 +150,10 @@ def plot_results_Gradient(model, steps, num_actions, runs, alpha):
     plt.show()
 
 
+# %%
 steps = 1000
 num_actions = 10
 runs = 5
 alpha = [0.1, 0.4]
 plot_results_Gradient(Gradient, steps, num_actions, runs, alpha)
+# %%

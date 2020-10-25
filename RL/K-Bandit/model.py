@@ -5,6 +5,11 @@ torch.manual_seed(14)
 
 
 class Bandit(object):
+    """
+    K-Bandit base class.
+
+    """
+
     def __init__(self, num_actions):
         self.num_actions = num_actions
         self.true_values = torch.randn((self.num_actions))
@@ -27,7 +32,7 @@ class Bandit(object):
         self.action_sample_count = torch.zeros((self.num_actions,))
 
     def sampling(self, step):
-        raise Exception('Sampling method not defined')
+        raise Exception('Sampling method is not defined')
 
     def run(self, num_steps):
         self.reset()
